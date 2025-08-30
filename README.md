@@ -17,30 +17,17 @@ We leverage open-source datasets from the **NASA Exoplanet Archive** (Kepler, K2
 ```markdown
 
 exoplanet-ai-detector/
-│
-├── data/                     # Datasets (raw + processed)
-│   ├── raw/                  # Original data from NASA archive
-│   ├── processed/            # Cleaned & transformed data
-│
-├── notebooks/                # Jupyter/Colab notebooks (optional)
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_preprocessing.ipynb
-│   ├── 03_model_training.ipynb
-│   └── 04_evaluation.ipynb
-│
-├── src/                      # Source code
-│   ├── data_preprocessing.py
-│   ├── model.py              # ML/DL model definition
-│   ├── train.py              # Training pipeline
-│   └── evaluate.py           # Model evaluation
-│
-├── saved_models/             # Trained models
-│   └── best_model.pkl
-│
-├── results/                  # Outputs
-│   ├── figures/              # Graphs, plots
-│   └── reports/              # Evaluation metrics, logs
-│
+├── config/
+├── src/
+│   ├── data/
+│   ├── models/
+│   └── utils/
+├── scripts/
+├── data/{raw,processed,external}/
+├── notebooks/
+├── saved_models/
+├── results/{figures,reports}/
+├── setup.py
 ├── requirements.txt          # Dependencies
 ├── README.md                 # Project overview
 ├── LICENSE                   # License file
