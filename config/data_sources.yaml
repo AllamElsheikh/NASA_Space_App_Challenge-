@@ -1,0 +1,31 @@
+# NASA Data Sources Configuration
+# NASA Space Apps Challenge 2025
+
+# NASA Exoplanet Archive
+exoplanet_archive:
+  base_url: "https://exoplanetarchive.ipac.caltech.edu"
+  koi_endpoint: "/cgi-bin/nstedAPI/nph-nstedAPI"
+  
+# MAST (Mikulski Archive for Space Telescopes)
+mast:
+  base_url: "https://mast.stsci.edu"
+  search_endpoint: "/api/v0.1/invoke"
+  
+# Mission specific settings
+missions:
+  kepler:
+    name: "Kepler"
+    cadence: "long"
+    quality_bitmask: 1130799
+    
+  tess:
+    name: "TESS"
+    sector_range: [1, 60]
+    cadence: "short"
+    
+# Catalogs to download
+catalogs:
+  - name: "KOI"
+    columns: ["kepoi_name", "koi_disposition", "koi_period", "koi_depth"]
+  - name: "TOI" 
+    columns: ["tid", "toi_disposition", "pl_orbper", "pl_trandep"]
